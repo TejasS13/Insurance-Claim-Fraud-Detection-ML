@@ -1,14 +1,14 @@
-Insurance Claim Fraud Detection using Machine Learning
+# Insurance Claim Fraud Detection using Machine Learning
 
-An end-to-end Machine Learning classification project for identifying potentially fraudulent insurance claims using Python and Scikit-learn.
+> An end-to-end Machine Learning classification project for identifying potentially fraudulent insurance claims using Python and Scikit-learn.
 
-Project Overview
+## 📌 Project Overview
 
 Insurance fraud can result in significant financial losses and increase claim-processing costs. Manual claim verification can also be time-consuming and may fail to identify complex fraud patterns.
 
 This project develops a machine learning-based approach to identify potentially fraudulent insurance claims for further investigation.
 
-The workflow covers:
+### Project Workflow
 
 - Data integration
 - Data cleaning and preprocessing
@@ -20,50 +20,60 @@ The workflow covers:
 - Feature importance analysis
 - Business recommendations
 
-Dataset
+---
+
+## 📊 Dataset
 
 The project uses three datasets:
 
-1. Insurance Data — 10,000 records and 38 columns
-2. Employee Data — 1,200 records and 10 columns
-3. Vendor Data — 600 records and 7 columns
+| Dataset | Records | Columns |
+|---|---:|---:|
+| Insurance Data | 10,000 | 38 |
+| Employee Data | 1,200 | 10 |
+| Vendor Data | 600 | 7 |
 
 The datasets were integrated to combine customer, employee/agent, and vendor information for fraud analysis.
 
-After integration, the combined dataset contained 10,000 records and 53 columns.
+After integration, the combined dataset contained **10,000 records and 53 columns**.
 
-Target Variable
+### Target Variable
 
-The "CLAIM_STATUS" variable was mapped to create the binary "Fraud" target:
+The `CLAIM_STATUS` variable was mapped to create the binary `Fraud` target:
 
-- "0" — Genuine Claim
-- "1" — Fraudulent Claim
+| Value | Meaning |
+|---:|---|
+| `0` | Genuine Claim |
+| `1` | Fraudulent Claim |
 
-The final dataset contained:
+### Class Distribution
 
-- 9,497 Genuine Claims
-- 503 Fraudulent Claims
-- Fraud Rate: 5.03%
+- **Genuine Claims:** 9,497
+- **Fraudulent Claims:** 503
+- **Fraud Rate:** 5.03%
 
-This indicates a class imbalance in the dataset.
+The dataset therefore contains a significant class imbalance, which is an important consideration when evaluating fraud-detection models.
 
-Project Objectives
+---
 
-- Understand the insurance claim data
-- Integrate insurance, employee, and vendor information
-- Clean and preprocess the datasets
-- Perform exploratory data analysis
-- Identify potential fraud-related patterns
-- Prepare relevant features for Machine Learning
-- Analyze class imbalance
-- Train multiple classification models
-- Compare model performance
-- Identify important fraud-related factors
-- Generate actionable business recommendations
+## 🎯 Project Objectives
 
-Exploratory Data Analysis
+1. Understand the insurance claim data
+2. Integrate insurance, employee, and vendor information
+3. Clean and preprocess the datasets
+4. Perform exploratory data analysis
+5. Identify potential fraud-related patterns
+6. Prepare relevant features for Machine Learning
+7. Analyze class imbalance
+8. Train multiple classification models
+9. Compare model performance
+10. Identify important fraud-related factors
+11. Generate actionable business recommendations
 
-The project includes 18 visualizations covering:
+---
+
+## 🔎 Exploratory Data Analysis
+
+The project includes **18 visualizations** covering:
 
 - Customer age distribution
 - Marital status
@@ -84,19 +94,21 @@ The project includes 18 visualizations covering:
 - Claims by state
 - Risk segmentation
 
-Key EDA Insights
+### Key EDA Insights
 
-- Most policyholders fall between 30–60 years.
+- Most policyholders fall within the 30–60 age range.
 - Married customers represent the dominant customer segment.
-- Auto and Health insurance generate a large share of claims.
-- Most claims are relatively small, with a smaller number of very large claims.
+- Auto and Health insurance account for a large share of claims.
+- Most claims are relatively small, with a smaller number of high-value claims.
 - Major incident severity shows higher fraud likelihood.
 - Some insurance categories show higher fraud frequency.
 - Missing police reports are associated with suspicious claim patterns.
 - Late-night incidents show higher fraud concentration.
 - High-risk segments show increased denial rates.
 
-Data Preprocessing
+---
+
+## 🧹 Data Preprocessing
 
 The preprocessing workflow included:
 
@@ -108,7 +120,9 @@ The preprocessing workflow included:
 - Train-test splitting
 - Stratified sampling to preserve class distribution
 
-Machine Learning Models
+---
+
+## 🤖 Machine Learning Models
 
 Four classification algorithms were trained and compared:
 
@@ -117,66 +131,78 @@ Four classification algorithms were trained and compared:
 3. Random Forest
 4. Gradient Boosting
 
-Model Performance
+---
 
-Model| Accuracy
-Logistic Regression| 94.95%
-Random Forest| 94.95%
-Gradient Boosting| 94.80%
-Decision Tree| 88.80%
+## 📈 Model Performance
 
-Logistic Regression and Random Forest achieved the highest reported accuracy of 94.95% on the test dataset.
+| Model | Accuracy |
+|---|---:|
+| Logistic Regression | **94.95%** |
+| Random Forest | **94.95%** |
+| Gradient Boosting | **94.80%** |
+| Decision Tree | **88.80%** |
 
-«Note: Since the dataset is imbalanced, accuracy should not be considered sufficient on its own for evaluating a fraud detection model. Fraud-focused metrics such as precision, recall, F1-score, ROC-AUC and confusion-matrix analysis are important for a more comprehensive evaluation.»
+**Logistic Regression and Random Forest achieved the highest reported accuracy of 94.95%.**
 
-Important Fraud-Related Factors
+> **Evaluation note:** Because the dataset is imbalanced, accuracy alone should not be treated as the only measure of fraud-detection performance. Precision, recall, F1-score, ROC-AUC, and confusion-matrix analysis are important for a more complete evaluation.
+
+---
+
+## 🔑 Important Fraud-Related Factors
 
 Feature analysis highlighted several factors associated with fraudulent claims:
 
-1. Claim Amount
-2. Incident Severity
-3. Risk Segmentation
-4. Premium Amount
-5. Incident Hour
-6. Police Report Availability
-7. Injury Information
+- Claim Amount
+- Incident Severity
+- Risk Segmentation
+- Premium Amount
+- Incident Hour
+- Police Report Availability
+- Injury Information
 
 These factors can help prioritize claims for additional investigation.
 
-Business Recommendations
+---
 
-1. Automatically Flag High Claim Amounts
+## 💼 Business Recommendations
+
+### 1. Automatically Flag High Claim Amounts
 
 Claims with unusually high claim amounts can be automatically flagged for additional verification.
 
-2. Increase Verification for High-Risk Segments
+### 2. Increase Verification for High-Risk Segments
 
 High-risk customer segments can receive additional verification before claim approval.
 
-3. Investigate Claims Without Police Reports
+### 3. Investigate Claims Without Police Reports
 
 Claims without available police reports can be prioritized for further investigation.
 
-4. Monitor Repeat Vendors and Agents
+### 4. Monitor Repeat Vendors and Agents
 
 Vendor and agent behavior can be monitored to identify recurring suspicious patterns.
 
-5. Deploy Machine Learning Before Claim Approval
+### 5. Introduce ML-Based Fraud Screening
 
 A fraud-screening model can be incorporated into the claim-processing workflow to identify potentially suspicious claims before approval.
 
-Technology Stack
+---
 
-- Python
-- Pandas
-- NumPy
-- Scikit-learn
-- Matplotlib
-- Seaborn
-- Jupyter Notebook
+## 🛠️ Technology Stack
 
-Project Workflow
+| Category | Tools |
+|---|---|
+| Programming | Python |
+| Data Analysis | Pandas, NumPy |
+| Machine Learning | Scikit-learn |
+| Visualization | Matplotlib, Seaborn |
+| Environment | Jupyter Notebook |
 
+---
+
+## 🔄 Project Workflow
+
+```text
 Data Integration
        ↓
 Data Cleaning & Preprocessing
@@ -198,17 +224,45 @@ Model Evaluation
 Feature Importance
        ↓
 Business Recommendations
+```
 
-Conclusion
+---
 
-This project developed a Machine Learning-based approach for insurance claim fraud detection using 10,000 insurance claim records integrated with employee and vendor information.
+## 📁 Repository Contents
 
-Through exploratory analysis and Machine Learning classification, the project identified important fraud-related patterns and compared four classification algorithms. Logistic Regression and Random Forest achieved the highest reported accuracy of 94.95%.
+```text
+Insurance-Claim-Fraud-Detection-ML/
+│
+├── Insurance_Claim_Fraud_Detection_using_Machine_Learning.ipynb
+├── README.md
+└── .gitignore
+```
 
-The project demonstrates how Machine Learning and data analytics can support insurance companies in fraud screening, risk prioritization, claim investigation, and more efficient claim-processing workflows.
+The Jupyter Notebook contains the complete analysis, preprocessing, visualizations, model training, evaluation, and findings.
 
-Project File
+---
 
-The complete analysis, code, visualizations, model training, evaluation, and findings are available in the Jupyter Notebook:
+## ⚠️ Project Limitations
 
-"Insurance_Claim_Fraud_Detection_using_Machine_Learning.ipynb"
+- The dataset contains a relatively small proportion of fraudulent claims, creating class imbalance.
+- Accuracy alone does not fully capture fraud-detection effectiveness.
+- The model is intended as an analytical and screening approach rather than a production-ready fraud decision system.
+- Further validation on real-world and unseen insurance data would be required before deployment.
+
+---
+
+## ✅ Conclusion
+
+This project developed a Machine Learning-based approach for insurance claim fraud detection using **10,000 insurance claim records** integrated with employee and vendor information.
+
+Through exploratory analysis and Machine Learning classification, the project identified important fraud-related patterns and compared four classification algorithms. Logistic Regression and Random Forest achieved the highest reported accuracy of **94.95%**, followed by Gradient Boosting at **94.80%**.
+
+The project demonstrates how Machine Learning and data analytics can support insurance organizations in fraud screening, risk prioritization, claim investigation, and more efficient claim-processing workflows.
+
+---
+
+## 📓 Project Notebook
+
+The complete analysis is available in:
+
+**`Insurance_Claim_Fraud_Detection_using_Machine_Learning.ipynb`**

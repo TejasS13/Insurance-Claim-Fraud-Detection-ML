@@ -1,24 +1,40 @@
-# Insurance Claim Fraud Detection using Machine Learning
+# Insurance Claim Fraud Detection — Machine Learning, SQL & Excel
 
-> An end-to-end Machine Learning classification project for identifying potentially fraudulent insurance claims using Python and Scikit-learn.
+> An end-to-end insurance claim fraud analysis project using Python, Machine Learning, SQL and Excel to identify potential fraud patterns, analyze risk factors and generate actionable business insights.
 
 ## 📌 Project Overview
 
 Insurance fraud can result in significant financial losses and increase claim-processing costs. Manual claim verification can also be time-consuming and may fail to identify complex fraud patterns.
 
-This project develops a machine learning-based approach to identify potentially fraudulent insurance claims for further investigation.
+This project develops an end-to-end analytical approach for identifying potentially fraudulent insurance claims. The project combines Python and Machine Learning for fraud classification, SQL for structured data analysis, and Excel for supporting analysis, Pivot-based reporting and dashboard visualization.
 
-### Project Workflow
+The analysis integrates insurance claim, employee/agent and vendor information to identify potential fraud-related patterns and support risk prioritization.
 
-- Data integration
-- Data cleaning and preprocessing
-- Exploratory Data Analysis (EDA)
-- Feature engineering and selection
-- Class imbalance analysis
-- Machine Learning classification
-- Model evaluation
-- Feature importance analysis
-- Business recommendations
+## 🔄 Project Workflow
+
+Data Integration
+       ↓
+Data Cleaning & Preprocessing
+       ↓
+Exploratory Data Analysis (EDA)
+       ↓
+SQL-Based Data Analysis
+       ↓
+Excel Analysis & Dashboard
+       ↓
+Fraud Target Creation
+       ↓
+Feature Engineering & Selection
+       ↓
+Class Imbalance Analysis
+       ↓
+Machine Learning Classification
+       ↓
+Model Evaluation
+       ↓
+Feature Importance Analysis
+       ↓
+Business Recommendations
 
 ---
 
@@ -35,6 +51,10 @@ The project uses three datasets:
 The datasets were integrated to combine customer, employee/agent, and vendor information for fraud analysis.
 
 After integration, the combined dataset contained **10,000 records and 53 columns**.
+
+### Excel Analysis Sample
+
+The Excel analysis workbook uses a 3,000-record sample from the same 10,000-record integrated dataset. The sample was used to demonstrate data cleaning, Pivot-based analysis, lookup functions and dashboard reporting in Excel.
 
 ### Target Variable
 
@@ -105,6 +125,68 @@ The project includes **18 visualizations** covering:
 - Missing police reports are associated with suspicious claim patterns.
 - Late-night incidents show higher fraud concentration.
 - High-risk segments show increased denial rates.
+
+---
+
+## 🔍 SQL Analysis
+
+SQL was used to perform structured analysis of the insurance claims data and investigate potential fraud-related patterns.
+
+### Analysis Performed
+
+- Claim volume and fraud-rate analysis
+- Fraud analysis by insurance type
+- Claim amount and severity analysis
+- Agent-level fraud analysis
+- Vendor-level fraud analysis
+- Identification of high-risk agents based on fraud rates
+- Analysis of claims above average claim amounts
+- State-level claim ranking
+- Incident severity analysis
+
+### SQL Concepts Demonstrated
+
+- SELECT and filtering
+- GROUP BY and HAVING
+- CASE WHEN
+- Aggregate functions
+- INNER JOIN
+- LEFT JOIN
+- Subqueries
+- Common Table Expressions (CTEs)
+- Window functions
+- Ranking and fraud-rate calculations
+
+📄 **SQL File:** `SQL/Fraud_Claims_SQL_Portfolio_Queries.sql`
+
+---
+
+## 📊 Excel Analysis & Dashboard
+
+Excel was used for supporting data analysis, structured reporting and dashboard visualization.
+
+### Excel Analysis Includes
+
+- Raw claims data
+- Cleaned claims data
+- Pivot-based analysis
+- Fraud-rate calculations
+- Insurance-type analysis
+- Lookup examples using INDEX/MATCH
+- Agent and vendor reference data
+- Summary KPI dashboard
+
+The workbook uses a 3,000-record sample from the overall 10,000-record integrated dataset.
+
+📊 **Excel Workbook:** `Excel/Insurance_Claim_Fraud_Excel_Analysis.xlsx`
+
+### Excel Dashboard
+
+![Insurance Claim Fraud Excel Dashboard](Images/excel_dashboard.png)
+
+### Pivot Analysis
+
+![Insurance Claim Fraud Pivot Analysis](Images/excel_pivot_analysis.png)
 
 ---
 
@@ -196,6 +278,8 @@ A fraud-screening model can be incorporated into the claim-processing workflow t
 | Data Analysis | Pandas, NumPy |
 | Machine Learning | Scikit-learn |
 | Visualization | Matplotlib, Seaborn |
+| SQL | SQL |
+| Spreadsheet Analysis | Microsoft Excel |
 | Environment | Jupyter Notebook |
 
 ---
@@ -233,12 +317,26 @@ Business Recommendations
 ```text
 Insurance-Claim-Fraud-Detection-ML/
 │
-├── Insurance_Claim_Fraud_Detection_using_Machine_Learning.ipynb
+├── .gitignore
 ├── README.md
-└── .gitignore
+│
+├── Insurance_Claim_Fraud_Detection_using_Machine_Learning.ipynb
+│
+├── SQL/
+│   └── Fraud_Claims_SQL_Portfolio_Queries.sql
+│
+├── Excel/
+│   └── Insurance_Claim_Fraud_Excel_Analysis.xlsx
+│
+└── Images/
+    ├── excel_dashboard.png
+    └── excel_pivot_analysis.png
 ```
 
-The Jupyter Notebook contains the complete analysis, preprocessing, visualizations, model training, evaluation, and findings.
+Python Notebook: Complete data preprocessing, EDA, visualization, machine learning modeling and evaluation.
+SQL File: Structured SQL queries for insurance claim and fraud analysis.
+Excel Workbook: Data cleaning, Pivot-based analysis, lookup examples and summary dashboard.
+Images: Screenshots of the Excel dashboard and analytical outputs.
 
 ---
 
@@ -253,16 +351,18 @@ The Jupyter Notebook contains the complete analysis, preprocessing, visualizatio
 
 ## ✅ Conclusion
 
-This project developed a Machine Learning-based approach for insurance claim fraud detection using **10,000 insurance claim records** integrated with employee and vendor information.
+This project developed an end-to-end analytical approach to insurance claim fraud detection by combining Python, Machine Learning, SQL and Excel.
 
-Through exploratory analysis and Machine Learning classification, the project identified important fraud-related patterns and compared four classification algorithms. Logistic Regression and Random Forest achieved the highest reported accuracy of **94.95%**, followed by Gradient Boosting at **94.80%**.
+The project integrated insurance claim, employee/agent and vendor information, performed exploratory analysis and identified important fraud-related patterns. SQL was used for structured claim, fraud-rate, agent and vendor analysis, while Excel provided supporting data analysis, Pivot-based reporting and dashboard visualization.
 
-The project demonstrates how Machine Learning and data analytics can support insurance organizations in fraud screening, risk prioritization, claim investigation, and more efficient claim-processing workflows.
+Four Machine Learning classification algorithms were trained and compared, with Logistic Regression and Random Forest achieving the highest reported accuracy of 94.95%.
+
+The project demonstrates how data analytics, SQL, Excel and Machine Learning can work together to support fraud screening, risk prioritization, claim investigation and data-driven decision-making.
 
 ---
 
-## 📓 Project Notebook
+## 📂 Project Resources
 
-The complete analysis is available in:
-
-**`Insurance_Claim_Fraud_Detection_using_Machine_Learning.ipynb`**
+- [Machine Learning Notebook](Insurance_Claim_Fraud_Detection_using_Machine_Learning.ipynb)
+- [SQL Fraud Analysis](SQL/Fraud_Claims_SQL_Portfolio_Queries.sql)
+- [Excel Analysis & Dashboard](Excel/Insurance_Claim_Fraud_Excel_Analysis.xlsx)
